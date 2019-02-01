@@ -198,10 +198,10 @@ def problem2b(rect, n, delta, win):
     h = rect.get_height()
     c1 = rect.get_upper_left_corner()
     c2 = rect.get_lower_right_corner()
-    for k in range(n):
-        rect1 = rg.Rectangle(rg.Point(c1.x-(((k)*delta)/2),
-                                      c1.y-(((k)*delta)/2)),
-                             rg.Point(c2.x+(((k)*delta)/2),c2.y+(((k)*delta)/2)))
+    for k in range(n-1):
+        rect1 = rg.Rectangle(rg.Point(c1.x-(((k+1)*delta)/2),
+                                      c1.y-(((k+1)*delta)/2)),
+                             rg.Point(c2.x+(((k+1)*delta)/2),c2.y+(((k+1)*delta)/2)))
         rect1.attach_to(win)
     win.render()
 
